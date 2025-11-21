@@ -8,10 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>Disable Ctrl+S</h1>
-        <p>This extension disables the Ctrl+S shortcut in the browser.</p>
-        <button id="disableCtrlS">Disable Ctrl+S</button>
-        <button id="enableCtrlS">Enable Ctrl+S</button>
+        <!-- Header -->
+        <div class="header">
+            <h1>Disable Ctrl+S</h1>
+        </div>
+        
+        <div class="content">
+            <!-- Keep Ctrl+S enabled on the current page -->
+            <span id="featureStatus">Status</span>
+            <span id="featureDescription">This page is protected by Disable Ctrl+S.</span>
+            <button id="keepCtrlSEnabled">Keep Ctrl+S enabled</button>
+
+            <!-- Otherwise, always disable Ctrl+S -->
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span>Copyright 2025 Vu T. Nguyen</span>
+        </div>
     </div>
 
     <script src="popup.js"></script>
