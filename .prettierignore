@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Config files
+package-lock.json
+.vscode/
+
+# Other
+*.min.js
+*.min.css
+
