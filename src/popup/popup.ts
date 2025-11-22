@@ -1,8 +1,4 @@
-interface SiteSettings {
-  [domain: string]: {
-    enabled: boolean;
-  };
-}
+import type { SiteSettings } from "../types";
 
 // Get current tab info
 async function getCurrentTab() {
@@ -98,9 +94,8 @@ async function toggleProtection() {
         action: "updateSettings",
         enabled: sites[domain].enabled,
       });
-    } catch (error) {
+    } catch {
       // Content script not available - this is expected on some pages
-      console.log("Content script not available on this page:", error);
     }
   }
 
@@ -113,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Toggle switch
   const toggle = document.getElementById("mainToggle");
-  toggle?.addEventListener("click", toggleProtection);
+  toggle?.addEventListener("change", toggleProtection);
 
   // TODO: To open options page
   // chrome.runtime.openOptionsPage();
@@ -135,11 +130,4 @@ document.addEventListener("DOMContentLoaded", () => {
       url: "https://github.com/ntvu19/disable-ctrl-s/issues",
     });
   });
-});
-
-// Listen for messages from content script
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === "saveBlocked") {
-    updateUI();
-  }
 });

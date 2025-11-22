@@ -6,11 +6,7 @@
   "permissions": [
     "storage",
     "tabs",
-    "contextMenus",
-    "activeTab",
-    "clipboardRead",
-    "clipboardWrite",
-    "scripting"
+    "activeTab"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -40,7 +36,7 @@
       "js": [
         "content/content.js"
       ],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ],
   "options_page": "options/options.html",
