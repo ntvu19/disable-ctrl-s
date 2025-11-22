@@ -10,21 +10,47 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
+            <div class="header-icon">🛡️</div>
             <h1>Disable Ctrl+S</h1>
         </div>
-        
-        <div class="content">
-            <!-- Keep Ctrl+S enabled on the current page -->
-            <span id="featureStatus">Status</span>
-            <span id="featureDescription">This page is protected by Disable Ctrl+S.</span>
-            <button id="keepCtrlSEnabled">Keep Ctrl+S enabled</button>
 
-            <!-- Otherwise, always disable Ctrl+S -->
+        <!-- Current Site Info -->
+        <div class="site-info">
+            <div class="site-domain" id="currentDomain">Loading...</div>
+            <div class="site-status" id="siteStatus">
+                <span class="status-indicator" id="statusIndicator"></span>
+                <span id="statusText">Protected</span>
+            </div>
+        </div>
+
+        <!-- Main Toggle Switch -->
+        <div class="toggle-section">
+            <div class="toggle-container">
+                <input type="checkbox" id="mainToggle" checked>
+                <label class="toggle-switch" for="mainToggle">
+                    <span class="toggle-slider"></span>
+                    <span class="sr-only">Toggle Ctrl+S protection</span>
+                </label>
+                <div class="toggle-labels">
+                    <span class="toggle-label-on">🔒 Locked Ctrl + S</span>
+                    <span class="toggle-label-off">🔓 Unlocked Ctrl + S</span>
+                </div>
+            </div>
+            <p class="toggle-description" id="toggleDescription">
+                Ctrl+S is currently <strong>BLOCKED</strong> on this site
+            </p>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <span>Copyright 2025 Vu T. Nguyen</span>
+            <div class="footer-links">
+                <a href="#" id="helpLink">Help</a>
+                <span>•</span>
+                <a href="#" id="feedbackLink">Feedback</a>
+            </div>
+            <div class="footer-copyright">
+                Made with 💖 by Vu T. Nguyen
+            </div>
         </div>
     </div>
 
