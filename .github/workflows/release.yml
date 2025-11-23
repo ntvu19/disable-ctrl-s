@@ -1,7 +1,6 @@
 name: Build and Release App
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - 'v*' # Workflow will be run when a tag starting with 'v' is pushed
@@ -26,7 +25,6 @@ jobs:
         run: |
           npm install
           npm run build
-          echo "${{ github.ref_name }}"
           zip -r disable-ctrl-s-${{ github.ref_name }}.zip dist
 
       - name: Create Release and Upload file
