@@ -37,10 +37,12 @@ A browser extension for Chromium and Firefox that intercepts and disables the de
 3.  Click **Load unpacked**.
 4.  Select the `dist` directory created by the build step.
 
+<!-- 
 #### Firefox
 1.  Open `about:debugging#/runtime/this-firefox`.
 2.  Click **Load Temporary Add-on...**.
 3.  Navigate to the `dist` directory and select the `manifest.json` file.
+-->
 
 ## Development
 
