@@ -31,7 +31,7 @@ jobs:
 
       - name: Create Release and Upload file
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
         with:
           files: disable-ctrl-s-*.zip
         env:
